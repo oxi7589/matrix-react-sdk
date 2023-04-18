@@ -172,7 +172,7 @@ const ExportDialog: React.FC<IProps> = ({ room, onFinished }) => {
                 },
                 invalid: () => {
                     const min = 1;
-                    const max = 2000;
+                    const max = 8000;
                     return _t("Enter a number between %(min)s and %(max)s", {
                         min,
                         max,
@@ -183,11 +183,11 @@ const ExportDialog: React.FC<IProps> = ({ room, onFinished }) => {
                 key: "number",
                 test: ({ value }) => {
                     const parsedSize = parseInt(value!, 10);
-                    return validateNumberInRange(1, 2000)(parsedSize);
+                    return validateNumberInRange(1, 8000)(parsedSize);
                 },
                 invalid: () => {
                     const min = 1;
-                    const max = 2000;
+                    const max = 8000;
                     return _t("Size can only be a number between %(min)s MB and %(max)s MB", { min, max });
                 },
             },
